@@ -10,26 +10,53 @@
  *
 */
 
-function fizzBuzz(num) {
-  let string = '';
+function fizzBuzz(num = 0) {
 
-  for(let i=1; i<num+1; ++i){
-    if(i % 3 === 0){
-      if(i % 5 === 0){
-        string +='fizzbuzz ';
-      } else {
-      string += 'fizz ';}
-    } else
-    if(i % 5 === 0) {
-      string += 'buzz ';
+  num = parseInt(num);
+
+  for(let i=1; i<num+1; i++){
+
+    const n = (i) => {
+      if(i%3===0 && i%5===0)
+        return 'кратно 3 и 5';
+      if(i%3===0)
+        return 'кратно 3';
+      if(i%5===0)
+        return 'кратно 5';
+      return '';
+    };
+
+    switch (n(i)) {
+      case 'кратно 3':
+        console.log('fizz');
+        break;
+      case 'кратно 5':
+        console.log('buzz');
+        break;
+      case 'кратно 3 и 5':
+        console.log('fizzbuzz');
+        break;
+      default:
+        console.log(i);
+        break;
     }
-    else {string += i+' ';}
 
-    if(i === num){return string.split(' ')}
-  }
+    // ####### Простое решение #######
 
-
+    // if(i % 3 === 0){
+    //   if(i % 5 === 0){
+    //     console.log('fizzbuzz');
+    //   }
+    //   else {
+    //     console.log('fizz');}
+    // } else
+    //   if(i % 5 === 0) {
+    //   console.log('buzz');
+    // } else {
+    //   console.log(i);
+    // }
+}
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-console.log(fizzBuzz(15));
+fizzBuzz(10);
