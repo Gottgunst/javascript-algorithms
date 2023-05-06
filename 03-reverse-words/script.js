@@ -9,20 +9,16 @@
 */
 
 function reverseWords(str = "", ...arg) {
+  const punctuation = '([,.!?—]+)';
 
   str = str.toString();
   if(arg.length>0) str+=', '+arg.join(', ');
 
-  const punctuation = '([,.!?—]+)';
-
-  str = str.replace(new RegExp(punctuation, 'g'), ' $1 ').split(' ').reverse();
-
-  //## Опция для написания предложения всегда с большой буквы.
-  // str[0] = str[0][0].toLocaleUpperCase()+str[0].slice(1);
-
-  str = str.join(' ').replace(new RegExp('  ' + punctuation + ' ', 'g'), '$1 ');
-
-  return str;
+  return  str.replace(new RegExp(punctuation, 'g'), ' $1 ')
+              .split(' ')
+              .reverse()
+              .join(' ')
+              .replace(new RegExp('  ' + punctuation + ' ', 'g'), '$1 ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
