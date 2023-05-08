@@ -10,7 +10,7 @@
 */
 
 function findVowels(str='') {
-  str = str.toString().toLocaleLowerCase();
+  str = str.toString().toLowerCase();
 
   const vowels = /[аяоёуюыиэе]+/g;
 
