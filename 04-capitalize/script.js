@@ -13,7 +13,7 @@ function capitalize(str = '', ...arg) {
 
   return str.replace(/\s+/g,' ')
             .split(' ')
-            .map(word => word ? word = word[0].toLocaleUpperCase() + word.slice(1) : '')
+            .map(word => word ? word = word[0].toUpperCase() + word.slice(1) : '')
             .join(' ');
 
 }
