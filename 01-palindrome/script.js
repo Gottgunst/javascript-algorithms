@@ -16,7 +16,7 @@
 function palindrome(str='false') {
 
   if(str.replace(/s/g,'').length > 0) {
-    const equal = str.toLocaleLowerCase().match(/[a-я]|\d|[@#$&]/g,'');
+    const equal = str.toLowerCase().match(/[a-я]|\d|[@#$&]/g,'');
     if(equal){
       return equal.join('') === [...equal].reverse().join('');
     }
