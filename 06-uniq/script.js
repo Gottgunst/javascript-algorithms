@@ -11,7 +11,7 @@ function uniq(arr=[]) {
 
   if(Array.isArray(arr)) {
     arr = arr.map(el => el = parseInt(el));
-    return arr.filter((num, index) => arr.indexOf(num) == index );
+    return arr.filter((num, index) => arr.indexOf(num) === index );
   }
     console.warn('передайте в функцию массив, а не '+ typeof(arr));
     return arr;
