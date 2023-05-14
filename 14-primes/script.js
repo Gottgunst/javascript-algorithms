@@ -6,7 +6,7 @@
  *
 */
 
-function primes(num) {
+function primes(num=0) {
 
   if(typeof(num) === 'object' || typeof(num) === 'boolean') {
     console.warn('Направьте в функцию число, a не ' + typeof(num));

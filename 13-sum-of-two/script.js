@@ -8,7 +8,7 @@
  *
 */
 
-function sumOfTwo(arr, sum) {
+function sumOfTwo(arr=[], sum=0) {
     // Напишите код здесь
     if(Array.isArray(arr) && typeof(sum)!=="object" && typeof(sum)!=="boolean") {
 
